@@ -251,6 +251,14 @@ nav{
     border-color:#000000;
 }
 
+#japanesecar{
+    border: 5px solid;
+    height: 300px;
+    width: 300px;
+    margin-top: 25px;
+    border-color:#000000;
+}
+
 .project-title{
     color: #FE7B08;
 }
@@ -267,10 +275,25 @@ nav{
     text-align: center;
 }
 
+#japanesecartitle{
+    text-align: center;
+}
+
+#japanesecartitle:hover{
+    text-align: center;
+}
+
 #nbaposdiv{
     height: 300px;
     width: 300px;
     margin-left: 25px;
+}
+
+#japanesecardiv{
+    height: 300px;
+    width: 300px;
+    margin-left: 400px;
+    margin-top: -300.5px;
 }
 
 .githubrepotext{
