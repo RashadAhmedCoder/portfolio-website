@@ -259,6 +259,14 @@ nav{
     border-color:#000000;
 }
 
+#penguin{
+    border: 5px solid;
+    height: 300px;
+    width: 300px;
+    margin-top: 25px;
+    border-color:#000000;
+}
+
 .project-title{
     color: #FE7B08;
 }
@@ -283,6 +291,14 @@ nav{
     text-align: center;
 }
 
+#penguintitle{
+    text-align: center;
+}
+
+#penguintitle:hover{
+    text-align: center;
+}
+
 #nbaposdiv{
     height: 300px;
     width: 300px;
@@ -295,6 +311,14 @@ nav{
     margin-left: 400px;
     margin-top: -300.5px;
 }
+
+#penguindiv{
+    height: 300px;
+    width: 300px;
+    margin-left: 775px;
+    margin-top: -300.5px;
+}
+
 
 .githubrepotext{
     display: flex;
