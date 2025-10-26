@@ -221,6 +221,15 @@ nav{
     animation-direction: alternate;
 }
 
+#javalogo{
+    color: #FE7B08;
+    animation: myRotate;
+    animation-play-state: running;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
 #pythonlogo:hover{
     color: #000000;
 }
@@ -234,6 +243,10 @@ nav{
 }
 
 #jslogo:hover{
+    color: #000000;
+}
+
+#javalogo:hover{
     color: #000000;
 }
 
