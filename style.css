@@ -1,6 +1,7 @@
 body{
-    background-color: #808080;
+    background-color: #F5F5DC;
     font-family: "Kanit", sans-serif;
+    color: #00008B;
 }
 
 *{
@@ -35,51 +36,51 @@ nav{
 }
 
 #home{
-    color: #FE7B08;
+    color: #00008B;
 }
 
 #projects{
-    color:#FE7B08
+    color:#00008B
 }
 
 #resume{
-    color:#FE7B08
+    color:#00008B
 }
 
 #githublogo{
-    color:#FE7B08
+    color:#00008B
 }
 
 #linkedinlogo{
-    color:#FE7B08
+    color:#00008B
 }
 
 #emaillogo{
-    color:#FE7B08
+    color:#00008B
 }
 
 #home:hover{
-    color: #000000
+    color: #0000ff
 }
 
 #projects:hover{
-    color:#000000
+    color:#0000ff
 }
 
 #resume:hover{
-    color:#000000
+    color:#0000ff
 }
 
 #githublogo:hover{
-    color:#000000
+    color:#0000ff
 }
 
 #linkedinlogo:hover{
-    color:#000000
+    color:#0000ff
 }
 
 #emaillogo:hover{
-    color:#000000
+    color:#0000ff
 }
 
 #description{
@@ -113,7 +114,7 @@ nav{
    padding: 5px 10px; 
    border: 2px solid;
    border-radius: 50px;
-   color: #FE7B08;
+   color: #00008B;
     margin-bottom: 20px;
     margin-right: 10px;
 }
@@ -123,7 +124,7 @@ nav{
     padding: 5px 10px; 
     border: 2px solid;
     border-radius: 50px;
-    color: #000000
+    color: #0000ff;
  }
 
 
@@ -147,8 +148,8 @@ nav{
 
 #projectdisp{
     border: 5px solid;
-    border-color: #000000;
-    background-color: #000000;
+    border-color: #F5F5DC;
+    background-color: #F5F5DC;
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
@@ -185,8 +186,66 @@ nav{
     border: 1px solid;
 }
 
+.certified-by{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.certified-by h2{
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.certified-by .cells{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.certified-by .cells .cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    padding: 10px 20px;
+    border: 1px solid;
+}
+
+#googlelogo{
+    width: 100px;
+    padding: 10px 20px;
+    animation: myRotate;
+    animation-play-state: running;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#harvardlogo{
+    width: 170px;
+    padding: 10px 20px;
+    animation: myRotate;
+    animation-play-state: running;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#ciscologo{
+    width: 170px;
+    padding: 10px 20px;
+    animation: myRotate;
+    animation-play-state: running;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+
 #pythonlogo{
-    color: #FE7B08;
+    color: #00008B;
     animation: myRotate;
     animation-play-state: running;
     animation-duration: 2s;
@@ -195,7 +254,7 @@ nav{
 }
 
 #htmllogo{
-    color: #FE7B08;
+    color: #00008B;
     animation: myRotate;
     animation-play-state: running;
     animation-duration: 2s;
@@ -204,7 +263,7 @@ nav{
 }
 
 #csslogo{
-    color: #FE7B08;
+    color: #00008B;
     animation: myRotate;
     animation-play-state: running;
     animation-duration: 2s;
@@ -213,7 +272,7 @@ nav{
 }
 
 #jslogo{
-    color: #FE7B08;
+    color: #00008B;
     animation: myRotate;
     animation-play-state: running;
     animation-duration: 2s;
@@ -222,7 +281,7 @@ nav{
 }
 
 #javalogo{
-    color: #FE7B08;
+    color: #00008B;
     animation: myRotate;
     animation-play-state: running;
     animation-duration: 2s;
@@ -231,23 +290,23 @@ nav{
 }
 
 #pythonlogo:hover{
-    color: #000000;
+    color: #0000ff;
 }
 
 #htmllogo:hover{
-    color: #000000;
+    color: #0000ff;
 }
 
 #csslogo:hover{
-    color: #000000;
+    color: #0000ff;
 }
 
 #jslogo:hover{
-    color: #000000;
+    color: #0000ff;
 }
 
 #javalogo:hover{
-    color: #000000;
+    color: #0000ff;
 }
 
 #resumepdf{
@@ -261,7 +320,7 @@ nav{
     height: 300px;
     width: 300px;
     margin-top: 25px;
-    border-color:#000000;
+    border-color:#00008B;
 }
 
 #japanesecar{
@@ -269,7 +328,7 @@ nav{
     height: 300px;
     width: 300px;
     margin-top: 25px;
-    border-color:#000000;
+    border-color:#00008B;
 }
 
 #penguin{
@@ -277,15 +336,23 @@ nav{
     height: 300px;
     width: 300px;
     margin-top: 25px;
-    border-color:#000000;
+    border-color:#00008B;
+}
+
+#volume{
+    border: 5px solid;
+    height: 300px;
+    width: 300px;
+    margin-top: 25px;
+    border-color:#00008B;
 }
 
 .project-title{
-    color: #FE7B08;
+    color: #00008B;
 }
 
 .project-title:hover{
-    color: #000000;
+    color: #0000ff;
 }
 
 #nbapositionprojecttitle{
@@ -312,24 +379,44 @@ nav{
     text-align: center;
 }
 
+#volumetitle{
+    text-align: center;
+}
+
+#volumetitle:hover{
+    text-align: center;
+}
+
 #nbaposdiv{
     height: 300px;
     width: 300px;
-    margin-left: 25px;
+    margin-left: 1150px;
+    margin-top: -300.5px;
+
+    
 }
 
 #japanesecardiv{
+
+    height: 300px;
+    width: 300px;
+    margin-left: 775px;
+    margin-top: -300.5px;
+}
+
+#penguindiv{
+
     height: 300px;
     width: 300px;
     margin-left: 400px;
     margin-top: -300.5px;
 }
 
-#penguindiv{
+#volumediv{
     height: 300px;
     width: 300px;
-    margin-left: 775px;
-    margin-top: -300.5px;
+    margin-left: 25px;
+    
 }
 
 
@@ -337,8 +424,9 @@ nav{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    color: #FE7B08;
+    color: #00008B;
     border: 1px solid;
+    
 
 }
 
@@ -346,16 +434,21 @@ nav{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    color: #000000;
+    color:#0000ff;
+    
 }
+
+
 
 @keyframes myRotate{
     100%{transform: rotateY(360deg)}
 }
 
+
+
 @media(max-width: 850px){
 
-    /* SECTION 1: INTRO */
+    
     .intro .text h2{
         font-size: 35px;
     }
@@ -363,19 +456,19 @@ nav{
 
 @media(max-width: 740px){
 
-    /* SECTION 1: INTRO */
+   
     .intro{
         flex-direction: column-reverse;
     }
 }
 
 @media(max-width: 600px){
-    /* NAVBAR */
+    
     nav{
         padding: 0 5px
     }
 
-    /* SECTION 1: INTRO */
+    
     .intro{
         padding: 0 5px; 
     }
