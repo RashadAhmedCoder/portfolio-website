@@ -347,6 +347,16 @@ nav{
     border-color:#00008B;
 }
 
+#rockpaper{
+    border: 5px solid;
+    height: 300px;
+    width: 300px;
+    margin-top: 25px;
+    border-color:#00008B;
+
+}
+
+
 .project-title{
     color: #00008B;
 }
@@ -387,11 +397,19 @@ nav{
     text-align: center;
 }
 
+#rockpapertitle{
+    text-align: center;
+}
+
+#rockpapertitle:hover{
+    text-align: center;
+}
+
 #nbaposdiv{
     height: 300px;
     width: 300px;
-    margin-left: 1150px;
-    margin-top: -300.5px;
+    margin-left: 1100px;
+    margin-top: -1000px;
 
     
 }
@@ -400,23 +418,32 @@ nav{
 
     height: 300px;
     width: 300px;
-    margin-left: 775px;
-    margin-top: -300.5px;
+    margin-left: 25px;
+    margin-top: 130px;
+
+    
 }
 
 #penguindiv{
 
     height: 300px;
     width: 300px;
-    margin-left: 400px;
+    margin-left: 750px;
     margin-top: -300.5px;
 }
 
 #volumediv{
     height: 300px;
     width: 300px;
-    margin-left: 25px;
+    margin-left: 400px;
     
+}
+
+#rockpaperdiv{
+    height: 300px;
+    width: 300px;
+    margin-left: 25px;
+    margin-top: 0px;
 }
 
 
