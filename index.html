@@ -1,115 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Home | Rashad Ahmed Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" type="image/png" href="portfolio-logo3.png">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rashad Ahmed | ECE &amp; Machine Learning</title>
+<meta name="description" content="Rashad Ahmed: NYU Tandon electrical and computer engineering student focused on machine learning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<meta name="viewport" content="width=device-width, intial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --void:#080504; --panel:#140b09; --edge:#3a1a12; --arc:#ff5a2b; --arc-dim:#8f2f14;
+  --gold:#e8b44a; --text:#f0e1d9; --mute:#a89086;
+  --head:'Rajdhani','Segoe UI',sans-serif; --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace; --body:'IBM Plex Sans','Segoe UI',sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--void);color:var(--text);font:400 1rem/1.65 var(--body);
+  background-image:linear-gradient(rgba(255,90,43,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,90,43,.035) 1px,transparent 1px);background-size:48px 48px}
+a{color:var(--arc);text-decoration:none}
+a:hover{color:#fff}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+h1,h2,h3{font-family:var(--head);font-weight:600;line-height:1.1;color:#fff}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:rgba(8,5,4,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--edge)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;height:56px}
+.logo{font:600 1.15rem var(--head);letter-spacing:.14em;color:#fff}
+.links{display:flex;gap:22px;font:500 .85rem var(--mono);flex-wrap:wrap}
+.links a{color:var(--mute)}
+.links a:hover{color:var(--arc)}
+
+/* hero */
+.hero{min-height:calc(100vh - 56px);display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:32px;padding:48px 0}
+.boot{font:400 .82rem/1.9 var(--mono);color:var(--arc-dim);margin-bottom:22px}
+.boot span{display:block;opacity:0;animation:in .4s forwards}
+.boot span:nth-child(1){animation-delay:.2s}.boot span:nth-child(2){animation-delay:.8s}.boot span:nth-child(3){animation-delay:1.4s}
+.boot b{color:var(--arc);font-weight:500}
+@keyframes in{to{opacity:1}}
+h1{font-size:clamp(3rem,8vw,5.6rem);letter-spacing:.02em;text-shadow:0 0 28px rgba(255,90,43,.35)}
+.role{font:500 1.3rem var(--head);color:var(--arc);margin:14px 0 18px;letter-spacing:.04em}
+.lede{max-width:52ch;color:var(--text)}
+.cta{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+.btn{font:500 .9rem var(--mono);padding:11px 20px;border:1px solid var(--arc);color:var(--arc);position:relative;transition:.2s}
+.btn:hover{background:var(--arc);color:var(--void)}
+.btn.alt{border-color:var(--edge);color:var(--text)}
+.btn.alt:hover{background:var(--panel);border-color:var(--arc);color:#fff}
+.reactor{width:100%;max-width:400px;justify-self:center;filter:drop-shadow(0 0 22px rgba(255,90,43,.4))}
+.spin{transform-origin:200px 200px;animation:spin 40s linear infinite}
+.spin.r{animation-duration:26s;animation-direction:reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.ra{font:700 42px var(--head);fill:#fff0e8}
+.core{animation:pulse 3.2s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.55}}
+
+/* sections */
+section{padding:72px 0;border-top:1px solid var(--edge)}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:34px}
+.sec-head h2{font-size:2rem;letter-spacing:.06em}
+.sec-head::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--arc-dim),transparent)}
+.panel{background:var(--panel);border:1px solid var(--edge);padding:26px;position:relative}
+.panel::before,.panel::after{content:"";position:absolute;width:12px;height:12px;border:2px solid var(--arc)}
+.panel::before{top:-1px;left:-1px;border-right:0;border-bottom:0}
+.panel::after{bottom:-1px;right:-1px;border-left:0;border-top:0}
+.meta{font:400 .82rem var(--mono);color:var(--mute)}
+.about{display:grid;grid-template-columns:220px 1fr;gap:34px;align-items:start}
+.photo{width:220px;aspect-ratio:1;object-fit:cover;border:1px solid var(--arc-dim);background:var(--panel)}
+.about p+p{margin-top:14px}
+.stats{display:flex;gap:28px;margin-top:22px;flex-wrap:wrap}
+.stats div{font:400 .8rem var(--mono);color:var(--mute)}
+.stats strong{display:block;font:600 1.3rem var(--head);color:var(--gold)}
+
+/* experience */
+.job+.job{margin-top:22px}
+.job-top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline}
+.job h3{font-size:1.4rem}
+.org{color:var(--arc);font-family:var(--head);font-weight:500;font-size:1.1rem}
+.job ul{margin:14px 0 0 18px;color:var(--text)}
+.job li{margin-top:6px}
+.job li::marker{color:var(--arc)}
+
+/* projects */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.proj{display:flex;flex-direction:column;gap:12px}
+.proj h3{font-size:1.35rem}
+.proj p{font-size:.93rem;color:var(--text);flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font:400 .74rem var(--mono);color:var(--arc);border:1px solid var(--arc-dim);padding:2px 8px}
+.plinks{display:flex;gap:18px;font:500 .84rem var(--mono)}
+.proj.feat{grid-column:1/-1}
+.feat-flag{font:500 .76rem var(--mono);color:var(--gold)}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.skills h3{font-size:1.15rem;margin-bottom:12px;color:var(--arc)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font:400 .84rem var(--mono);padding:4px 10px;border:1px solid var(--edge);background:var(--void)}
+.certs{list-style:none;padding:0}
+.certs li{padding:8px 0;border-bottom:1px solid var(--edge);display:flex;justify-content:space-between;gap:12px;font-size:.95rem}
+.certs li:last-child{border:0}
+
+/* contact */
+.contact{text-align:left}
+.contact p{max-width:52ch;margin-bottom:22px}
+footer{padding:28px 0;border-top:1px solid var(--edge);font:400 .78rem var(--mono);color:var(--mute)}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;min-height:0}
+  .reactor{max-width:260px;order:-1}
+  .about{grid-template-columns:1fr}
+  .photo{width:150px}
+  .links{gap:14px;font-size:.78rem}
+  .logo{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .boot span{opacity:1}
+}
+</style>
 </head>
 <body>
+
 <nav>
-    <div class="left">
-        <a href="index.html" target="_self"><span id="home">Home</span></a>
+  <div class="wrap">
+    <a class="logo" href="#top">R. AHMED</a>
+    <div class="links">
+      <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
     </div>
-    <div class="right">
-        <a href="projects.html" target="_self" ><span id="projects">Projects</span></a>
-    </div>
-    <div class="right">
-        <a href="resume.html" target="_self"><span id="resume">Resume</span></a>
-    </div>
-    <div class="right">
-        <a href="https://github.com/RashadAhmedCoder" target="_blank"><i class="fa-brands fa-square-github fa-2x" id="githublogo"> </i></a>
-    </div>
-    <div class="right">
-        <a href="https://www.linkedin.com/in/rashad-ahmed-93323b343/" target="_blank"><i class="fa-brands fa-linkedin fa-2x" id="linkedinlogo"></i></a>
-    </div>
-    <div class="right">
-        <a href="mailto:rashad42ahmed@gmail.com" target="_blank"><i class="fa-solid fa-envelope fa-2x" id="emaillogo"></i></a>
-    </div>
+  </div>
 </nav>
-<main>
-    <section class="intro">
-        <div class="text">
-            <h2>Rashad Ahmed</h2>
-            <br>
-            <p id="description">I'm a student at Thomas A. Edison Career and Technical Education High School that's dedicated to pursuing a career in computer science! My focus in the field lies primarily in the world of data science and machine learning, but I am also fully capable with web development and computer vision. Through my eagerness to learn and create, I've obtained many credentials in the computer science field and have successfully produced projects that showcase my skills. </p>
 
-            <div class="links">
-                <a href="mailto:rashad42ahmed@gmail.com"><span>Contact: rashad42ahmed@gmail.com</span></a>
-                <a href="resume.html" target="_self"><span id="viewresume">View Resume</span></a>
-            </div>
+<main id="top">
+<div class="wrap">
+  <header class="hero">
+    <div>
+      <div class="boot">
+        <span><b>&gt;</b> initializing profile...</span>
+        <span><b>&gt;</b> NYU Tandon School of Engineering: online</span>
+        <span><b>&gt;</b> focus: machine learning. status: building.</span>
+      </div>
+      <h1>Rashad Ahmed</h1>
+      <p class="role">Electrical &amp; Computer Engineering · Machine Learning</p>
+      <p class="lede">I'm a freshman at NYU Tandon who builds things with data, models, and code. I like turning raw machine learning output into software people can actually use.</p>
+      <div class="cta">
+        <a class="btn" href="#projects">View projects</a>
+        <a class="btn alt" href="Rashad_Ahmed_Resume.pdf" target="_blank" rel="noopener">Open resume</a>
+      </div>
+    </div>
+    <svg class="reactor" viewBox="0 0 400 400" role="img" aria-label="Animated arc reactor with the initials RA">
+      <g fill="none" stroke="#ff5a2b">
+        <circle cx="200" cy="200" r="190" stroke-opacity=".25"/>
+        <circle class="spin" cx="200" cy="200" r="176" stroke-width="10" stroke-dasharray="2 9" stroke-opacity=".7"/>
+        <g class="spin r" stroke-width="3" stroke-opacity=".85">
+          <circle cx="200" cy="200" r="148" stroke-dasharray="80 30 40 30"/>
+        </g>
+        <circle cx="200" cy="200" r="118" stroke-width="2" stroke-opacity=".5"/>
+        <g class="spin" stroke-width="14" stroke-opacity=".9">
+          <path d="M200 96 L200 118 M200 282 L200 304 M96 200 L118 200 M282 200 L304 200 M126 126 L142 142 M258 258 L274 274 M274 126 L258 142 M142 258 L126 274"/>
+        </g>
+        <circle cx="200" cy="200" r="76" stroke-width="2"/>
+        <circle cx="200" cy="200" r="52" stroke-width="6" stroke-opacity=".9"/>
+      </g>
+      <circle class="core" cx="200" cy="200" r="46" fill="#ff5a2b" fill-opacity=".28"/>
+      <circle cx="200" cy="200" r="40" fill="#080504" stroke="#ff5a2b" stroke-opacity=".7"/>
+      <text class="ra" x="200" y="214" text-anchor="middle">RA</text>
+    </svg>
+  </header>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head"><h2>About</h2></div>
+    <div class="about">
+      <img class="photo" src="rashadahmed.webp" alt="Portrait of Rashad Ahmed" onerror="this.style.display='none'">
+      <div>
+        <p>I'm studying Electrical &amp; Computer Engineering at NYU Tandon School of Engineering. My main interest is machine learning, and I also build web apps and computer vision programs to put those ideas to work.</p>
+        <p>This spring I interned at 24/7 Teach on Naomi-AI, an AI learning platform, where I built generation pipelines and cleaned up model output for the app. Before that, I wrote custom Python tools for small businesses at the Queens College Tech Incubator.</p>
+        <div class="stats">
+          <div><strong>NYU Tandon</strong>B.S. ECE, Freshman</div>
+          <div><strong>2</strong>Internships</div>
+          <div><strong>5</strong>Featured projects</div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div class="headshot">
-            <img src="rashadahmed.webp" alt="Rashad Ahmed image">
-        </div>
-    </section>
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head"><h2>Experience</h2></div>
+    <div class="panel job">
+      <div class="job-top"><h3>Web and AI Development Intern</h3><span class="meta">March 2026 – May 2026</span></div>
+      <div class="org">24/7 Teach · Naomi-AI</div>
+      <ul>
+        <li>Built constraint-guided generation pipelines that produce New York State standards-aligned 8th grade math problem sets.</li>
+        <li>Converted large volumes of AI output into normalized, machine-readable JSON datasets for the frontend and backend.</li>
+        <li>Ran error analysis on model outputs to identify failure patterns.</li>
+      </ul>
+    </div>
+    <div class="panel job">
+      <div class="job-top"><h3>Information Technology Intern</h3><span class="meta">November 2024 – December 2024</span></div>
+      <div class="org">Tech Incubator at Queens College</div>
+      <ul>
+        <li>Met with business owners to identify operational needs and built custom Python solutions, including spreadsheet automation and a personal bot assistant.</li>
+        <li>Marketed the incubator's technology services to small businesses in the community.</li>
+        <li>Helped with facility upkeep, including cable management in the game room.</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <section id="featured-project">
-        <h2 id="featuredproject">Featured Project</h2>
-        <br>
-        <div id="projectdesc">
-            A computer vision program that is a simple Rock Paper Scissors game that can detect which move you play as you go against a bot made using Python OpenCV and Google MediaPipe!
-        </div>
-        <div id="projectdisp">
-            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=I0kcwJnAhjc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head"><h2>Projects</h2></div>
+    <div class="grid">
+      <article class="panel proj feat">
+        <span class="feat-flag">Featured</span>
+        <h3>Rock Paper Scissors Detection</h3>
+        <p>A computer vision game that detects which move you play with your hand and competes against a bot in real time.</p>
+        <div class="tags"><span>Python</span><span>OpenCV</span><span>MediaPipe</span></div>
+        <div class="plinks"><a href="https://www.youtube.com/watch?v=I0kcwJnAhjc" target="_blank" rel="noopener">Watch demo</a><a href="https://github.com/RashadAhmedCoder/rock-paper-scissors-cv" target="_blank" rel="noopener">GitHub</a></div>
+      </article>
+      <article class="panel proj">
+        <h3>Hand Gesture Volume Control</h3>
+        <p>Controls system volume by tracking hand gestures through a webcam.</p>
+        <div class="tags"><span>Python</span><span>OpenCV</span><span>MediaPipe</span></div>
+        <div class="plinks"><a href="https://www.youtube.com/watch?v=gNI1Omcr0Qg" target="_blank" rel="noopener">Watch demo</a><a href="https://github.com/RashadAhmedCoder/hand-gesture-volume-control" target="_blank" rel="noopener">GitHub</a></div>
+      </article>
+      <article class="panel proj">
+        <h3>Penguin Species Predictor</h3>
+        <p>A machine learning web app that predicts a penguin's species from its measurements.</p>
+        <div class="tags"><span>Pandas</span><span>Scikit-learn</span><span>Flask</span><span>HTML/CSS</span></div>
+        <div class="plinks"><a href="https://penguin-species-predictor.onrender.com/" target="_blank" rel="noopener">Live app</a><a href="https://github.com/RashadAhmedCoder/penguin-species-predictor" target="_blank" rel="noopener">GitHub</a></div>
+      </article>
+      <article class="panel proj">
+        <h3>NBA Position Predictor</h3>
+        <p>A machine learning web app that predicts an NBA player's position from their stats.</p>
+        <div class="tags"><span>Pandas</span><span>Scikit-learn</span><span>Flask</span><span>HTML/CSS</span></div>
+        <div class="plinks"><a href="https://nba-position-predictor-app.onrender.com/" target="_blank" rel="noopener">Live app</a><a href="https://github.com/RashadAhmedCoder/nba-position-predictor-app" target="_blank" rel="noopener">GitHub</a></div>
+      </article>
+      <article class="panel proj">
+        <h3>Japanese Cars Web Scraped</h3>
+        <p>A web scraper that collects Japanese car listings and presents them in a Flask app.</p>
+        <div class="tags"><span>BeautifulSoup</span><span>Flask</span><span>HTML/CSS</span></div>
+        <div class="plinks"><a href="https://japanese-cars-web-scraping.onrender.com/" target="_blank" rel="noopener">Live app</a><a href="https://github.com/RashadAhmedCoder/japanese-cars-web-scraping" target="_blank" rel="noopener">GitHub</a></div>
+      </article>
+    </div>
+  </div>
+</section>
 
-    </section>
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head"><h2>Skills &amp; Certifications</h2></div>
+    <div class="skills">
+      <div class="panel">
+        <h3>Technical</h3>
+        <div class="chips"><span>Python</span><span>Java</span><span>JavaScript</span><span>HTML/CSS</span><span>Scikit-learn</span><span>Flask</span><span>Bootstrap</span></div>
+      </div>
+      <div class="panel">
+        <h3>Professional</h3>
+        <div class="chips"><span>Team Communication</span><span>Adaptability</span><span>Customer Service</span></div>
+      </div>
+      <div class="panel">
+        <h3>Certifications</h3>
+        <ul class="certs">
+          <li><a href="https://www.credly.com/badges/846b55f6-116f-48bf-9e91-b9870e2b9f3d/public_url" target="_blank" rel="noopener">Google Data Analytics Professional Certificate</a></li>
+          <li><a href="https://www.credly.com/users/rashad-ahmed.aa3e7b8e" target="_blank" rel="noopener">Data Analytics Essentials (Cisco)</a></li>
+          <li><a href="https://www.credly.com/users/rashad-ahmed.aa3e7b8e" target="_blank" rel="noopener">Introduction to Data Science (Cisco)</a></li>
+          <li><a href="https://certificates.cs50.io/7a666764-6300-4a8f-9021-c51ec62ea028.pdf?size=letter" target="_blank" rel="noopener">Harvard CS50</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section id="programming-languages" class="programming-languages">
-        <h2>Programming Languages</h2>
-        <div class="cells">
-            <div class="cell">
-                <a href="https://www.python.org/" target="_blank"><i class="fa-brands fa-python fa-3x" id="pythonlogo"></i></a>
-            </div>
-
-            <div class="cell">
-                <a href="https://en.wikipedia.org/wiki/HTML" target="_blank"><i class="fa-brands fa-html5 fa-3x" id="htmllogo"></i></a>
-            </div>
-
-            <div class="cell">
-                <a href="https://en.wikipedia.org/wiki/CSS" target="_blank"><i class="fa-brands fa-css3-alt fa-3x" id="csslogo"></i></a>
-            </div>
-
-            <div class="cell">
-                <a href="https://www.javascript.com/" target="_blank"><i class="fa-brands fa-js fa-3x" id="jslogo"></i></a>
-            </div>
-
-            <div class="cell">
-                <a href="https://www.java.com/en/" target="_blank"><i class="fa-brands fa-java fa-3x" id="javalogo"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <section id="certified-by" class="certified-by">
-        <h2>Certified By</h2>
-        <div class="cells">
-            <div class="cell">
-                <a href="https://www.credly.com/badges/846b55f6-116f-48bf-9e91-b9870e2b9f3d/public_url" target="_blank"><img class="certified-images" id="googlelogo" src="googlelogo.png" alt="google logo"></a>
-            </div>
-
-            <div class="cell">
-                <a href="https://certificates.cs50.io/7a666764-6300-4a8f-9021-c51ec62ea028.pdf?size=letter" target="_blank"><img class="certified-images" id="harvardlogo" src="harvardlogo.png" alt="harvard logo"></a>
-            </div>
-
-            <div class="cell">
-                <a href="https://www.credly.com/users/rashad-ahmed.aa3e7b8e" target="_blank"><img class="certified-images" id="ciscologo" src="ciscologo.png" alt="cisco logo"></a>
-            </div>
-
-        
-        </div>
-    </section>
-
+<section id="contact">
+  <div class="wrap contact">
+    <div class="sec-head"><h2>Contact</h2></div>
+    <p>I'm open to internships and projects in machine learning and engineering. Email me and I'll reply.</p>
+    <div class="cta">
+      <a class="btn" href="mailto:rashad42ahmed@gmail.com">rashad42ahmed@gmail.com</a>
+      <a class="btn alt" href="https://github.com/RashadAhmedCoder" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn alt" href="https://www.linkedin.com/in/rashad-ahmed-93323b343/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn alt" href="Rashad_Ahmed_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+    </div>
+  </div>
+</section>
 </main>
+
+<footer><div class="wrap">© 2026 Rashad Ahmed · New York, NY</div></footer>
 </body>
 </html>
